@@ -120,12 +120,6 @@ function renderSkillSet(s: TechSkillSet): string {
 }
 
 // ── loadPortfolio ─────────────────────────────────────────────
-function calcYearsOfExperience(companies: Company[]): number {
-  const earliestYear = Math.min(
-    ...companies.map((c) => parseInt(c.startDate.split(" ").at(-1)!))
-  );
-  return new Date().getFullYear() - earliestYear;
-}
 
 function loadPortfolio(p: Porfoilio): void {
   const profileEl = document.getElementById("profile-content");
