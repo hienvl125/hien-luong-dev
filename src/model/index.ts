@@ -1,4 +1,10 @@
-export type Skill = 'typescript' | 'golang' | 'grpc' | 'postgres' | 'redis' | 'kafka' | 'kubernetes' | 'nodejs' | 'mysql' | 'restapi' | 'docker' | 'python' | 'mongodb' | 'aws' | 'git' | 'gin' | 'linux' | 'ruby on rails' | 'ruby'
+export type Skill = 'typescript' | 'golang' | 'grpc' | 'postgres' | 'redis' | 'kafka' | 'kubernetes' | 'nodejs' | 'mysql' | 'restapi' | 'docker' | 'python' | 'mongodb' | 'aws' | 'git' | 'gin' | 'linux' | 'ruby on rails' | 'ruby' | 'reactjs' | 'expressjs'
+
+export type ResumeVersion = {
+  companyOverview: string
+  jobDescriptions: string[]
+  techstack: string[]
+}
 
 export type Company = {
   name: string
@@ -8,6 +14,7 @@ export type Company = {
   endDate: string
   positionDescription: string
   skills: Skill[]
+  resumeVersion?: ResumeVersion
 }
 
 export type TechSkillSet = {
@@ -32,6 +39,7 @@ export type BasicProfile = {
   githubLink: string
   linkedinLink: string
   yearOfExperience: number
+  phone: string
 }
 
 export type Porfoilio = {
@@ -136,5 +144,15 @@ export const SKILL_META: Record<Skill, { label: string; cssClass: string; icon: 
     label: 'Ruby',
     cssClass: 'badge-ruby',
     icon: '',
+  },
+  reactjs: {
+    label: 'React',
+    cssClass: 'badge-reactjs',
+    icon: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14.23 12.004a2.236 2.236 0 0 1-2.235 2.236 2.236 2.236 0 0 1-2.236-2.236 2.236 2.236 0 0 1 2.235-2.236 2.236 2.236 0 0 1 2.236 2.236zm2.648-10.69c-1.346 0-3.107.96-4.888 2.622-1.78-1.653-3.542-2.602-4.887-2.602-.31 0-.592.06-.84.178C4.926 2.16 4.5 3.73 4.5 5.93c0 1.78.436 3.828 1.262 5.862C3.678 12.69 2.25 14.009 2.25 15.81c0 1.908 1.678 3.312 4.655 3.99 1.21.275 2.602.43 4.084.43 1.488 0 2.888-.155 4.102-.433 2.967-.677 4.659-2.08 4.659-3.987 0-1.796-1.424-3.113-3.496-4.01.828-2.04 1.266-4.094 1.266-5.88 0-2.197-.425-3.764-1.266-4.42a1.784 1.784 0 0 0-1.03-.306l-.152.01zM12 19.93c-3.924 0-7.5-1.178-7.5-3.12 0-1.04 1.074-2.16 2.87-2.99.638 1.344 1.412 2.618 2.297 3.768.262.34.68.542 1.123.542h2.42c.443 0 .86-.2 1.123-.543.886-1.15 1.66-2.424 2.297-3.768 1.797.83 2.87 1.95 2.87 2.99 0 1.943-3.576 3.12-7.5 3.12z"/></svg>',
+  },
+  expressjs: {
+    label: 'Express.js',
+    cssClass: 'badge-expressjs',
+    icon: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 18.588a1.529 1.529 0 0 1-1.895-.72l-3.45-4.771-.5-.667-4.003 5.444a1.466 1.466 0 0 1-1.802.708l5.158-6.92-4.798-6.251a1.595 1.595 0 0 1 1.9.666l3.576 4.83 3.596-4.81a1.435 1.435 0 0 1 1.788-.668L21.708 7.9l-2.522 3.283a.666.666 0 0 0 0 .994l4.804 6.412zM.002 11.576l.42-2.075c1.154-4.103 5.858-5.81 9.094-3.27 1.895 1.489 2.368 3.597 2.275 5.973H1.116C.943 16.447 4.005 19.009 7.92 17.7a4.078 4.078 0 0 0 2.582-2.876c.207-.666.548-.78 1.174-.588a5.417 5.417 0 0 1-2.589 3.957 6.272 6.272 0 0 1-7.306-.933 6.575 6.575 0 0 1-1.64-3.858c0-.235-.08-.455-.134-.666A88.33 88.33 0 0 1 0 11.577zm1.127-.286h9.654c-.06-3.076-2.001-5.258-4.59-5.278-2.882-.04-4.944 2.094-5.071 5.264z"/></svg>',
   },
 }

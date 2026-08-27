@@ -769,6 +769,18 @@ main {
   border-color: rgba(170, 0, 0, 0.3);
 }
 
+.badge-reactjs {
+  background: rgba(97, 218, 251, 0.12);
+  color: #fff;
+  border-color: rgba(97, 218, 251, 0.3);
+}
+
+.badge-expressjs {
+  background: rgba(34, 197, 94, 0.1);
+  color: var(--accent);
+  border-color: var(--border-accent);
+}
+
 /* Light mode badge adjustments */
 [data-theme="light"] .badge-kafka {
   background: rgba(0, 0, 0, 0.04);
